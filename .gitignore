@@ -2,5 +2,4 @@
 /**/build/*
 /**/nbproject/*
 !/**/nbproject/*.xml
-/**/dist/*
 /**/.generated_files/*

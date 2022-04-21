@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\pic16f15276-cnano-uart-io-expander-client-mplab-mcc.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>16384</length>
+      <used>1059</used>
+      <free>15325</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>2048</length>
+      <used>128</used>
+      <free>1920</free>
+    </memory>
+  </executable>
+</project>
