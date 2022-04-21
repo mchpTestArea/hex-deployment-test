@@ -11,8 +11,8 @@ pipeline {
 	
 	environment {
 		GITHUB_OWNER = 'microchip-pic-avr-examples'	
-		GITHUB_URL ='https://bitbucket.microchip.com/scm/~i64056/hex-deployment-test.git'
-		BITBUCKET_URL = 'https://github.com/mchpTestArea/hex-deployment-test '
+		GITHUB_URL ='https://github.com/mchpTestArea/hex-deployment-test'
+		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/~i64056/hex-deployment-test.git '
 		SEMVER_REGEX = '^(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+$'
 		ARTIFACTORY_SERVER = 'https://artifacts.microchip.com:7999/artifactory'
 	}	
