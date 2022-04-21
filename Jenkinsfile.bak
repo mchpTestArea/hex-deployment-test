@@ -27,7 +27,7 @@ pipeline {
 				script {
 					def githubObj = getGiHubInfo()					
 					download("tool-github-deploy","1.4.0")	
-					execute("python ./tool-github-deploy/tool-github-deploy/tool-github-deploy.py -deploy=true -gpat=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 -dgid=Aman-hebbale -dburl=${env.BITBUCKET_URL} -dgurl=${env.GITHUB_URL} -dtag=${env.TAG_NAME} -dmfd=true -digmc=true")						
+					execute("python ./tool-github-deploy/tool-github-deploy/tool-github-deploy.py -deploy=true -gpat=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 -dgid=${USER_NAME} -dburl=${env.BITBUCKET_URL} -dgurl=${env.GITHUB_URL} -dtag=${env.TAG_NAME} -dmfd=true -digmc=true")						
 					def PATH_TO_HEX_FILE = "./${githubObj.repoName}/${githubObj.repoName}.X/dist/default/production"
 					execute("cd ${PATH_TO_HEX_FILE} && rename ${githubObj.repoName}.X.production.hex ${githubObj.repoName}-${env.TAG_NAME}.hex")
 					execute("python ./tool-github-deploy/tool-github-deploy/tool-github-deploy.py -rlo=true -gpat=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  -rpn=${githubObj.repoName} -rltv=${env.TAG_NAME} -rltt=${env.TAG_NAME} -rlua=./${githubObj.repoName}/${githubObj.repoName}.X/dist/default/production/${githubObj.repoName}.X.production.hex")
